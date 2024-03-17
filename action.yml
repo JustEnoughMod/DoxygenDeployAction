@@ -39,9 +39,11 @@ runs:
 
     - name: Unzip image 
       run: wget https://github.com/doxygen/doxygen/releases/download/Release_1_10_0/doxygen-1.10.0.linux.bin.tar.gz
+      shell: bash
 
     - name: Unzip image 
       run: tar -zxvf doxygen-1.10.0.linux.bin.tar.gz
+      shell: bash
 
     - name: Generate Doxygen Documentation
       run: ./doxygen-1.10.0.linux.bin/bin/doxygen ${{ inputs.config_file }}
