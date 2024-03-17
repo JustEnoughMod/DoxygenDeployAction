@@ -42,11 +42,11 @@ runs:
       shell: bash
 
     - name: Unzip image 
-      run: tar -zxvf doxygen-1.10.0.linux.bin.tar.gz
+      run: tar -zxf doxygen-1.10.0.linux.bin.tar.gz
       shell: bash
 
     - name: Generate Doxygen Documentation
-      run: ./doxygen-1.10.0.linux.bin/bin/doxygen ${{ inputs.config_file }}
+      run: ./doxygen-1.10.0/bin/doxygen ${{ inputs.config_file }}
       shell: bash
       
     - name: Create .nojekyll (ensures pages with underscores work on gh pages)
