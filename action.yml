@@ -33,12 +33,18 @@ runs:
       with:
         submodules: "true"
 
-    - name: Install Doxygen
-      run: sudo apt-get install doxygen graphviz -y
+    - name: Install Graphviz && Wget
+      run: sudo apt-get install wget graphviz -y
       shell: bash
 
+    - name: Unzip image 
+      run: wget https://github.com/doxygen/doxygen/releases/download/Release_1_10_0/doxygen-1.10.0.linux.bin.tar.gz
+
+    - name: Unzip image 
+      run: tar -zxvf doxygen-1.10.0.linux.bin.tar.gz
+
     - name: Generate Doxygen Documentation
-      run: doxygen ${{ inputs.config_file }}
+      run: ./doxygen-1.10.0.linux.bin/bin/doxygen ${{ inputs.config_file }}
       shell: bash
       
     - name: Create .nojekyll (ensures pages with underscores work on gh pages)
