@@ -20,7 +20,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: JustEnoughMod/doxygen-github-pages-action@v1.0.0
+      - uses: JustEnoughMod/DoxygenDeployAction@v1.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
@@ -50,7 +50,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: JustEnoughMod/doxygen-github-pages-action@v1.0.0
+      - uses: JustEnoughMod/DoxygenDeployAction@v1.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
