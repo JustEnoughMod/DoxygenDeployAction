@@ -1,3 +1,5 @@
+# This is a fork that uses Doxygen 1.10
+
 # Doxygen GitHub Pages Deploy Action
 
 GitHub Action for making and deploying Doxygen documentation to a GitHub pages branch
@@ -18,7 +20,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
+      - uses: JustEnoughMod/doxygen-github-pages-action@v1.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
@@ -48,7 +50,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: DenverCoder1/doxygen-github-pages-action@v1.3.0
+      - uses: JustEnoughMod/doxygen-github-pages-action@v1.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
